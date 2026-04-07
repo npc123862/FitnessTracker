@@ -62,6 +62,8 @@ namespace FitnessTracker
             get { return metric3Label; }
         }
 
+        public abstract double CalculateCalories();
+        
         public virtual string GetSummary()
         {
             return $"{activityName}: {CalculateCalories():F2} calories burned";

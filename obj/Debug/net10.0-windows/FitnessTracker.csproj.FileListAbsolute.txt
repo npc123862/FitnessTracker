@@ -1,0 +1,15 @@
+C:\Users\ryoch\Downloads\DDOOCP\FitnessTracker\obj\Debug\net10.0-windows\FitnessTracker.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\ryoch\Downloads\DDOOCP\FitnessTracker\obj\Debug\net10.0-windows\FitnessTracker.AssemblyInfoInputs.cache
+C:\Users\ryoch\Downloads\DDOOCP\FitnessTracker\obj\Debug\net10.0-windows\FitnessTracker.AssemblyInfo.cs
+C:\Users\ryoch\Downloads\DDOOCP\FitnessTracker\obj\Debug\net10.0-windows\FitnessTracker.csproj.CoreCompileInputs.cache
+C:\Users\ryoch\Downloads\DDOOCP\FitnessTracker\obj\Debug\net10.0-windows\FitnessTracker.sourcelink.json
+C:\Users\ryoch\Downloads\DDOOCP\FitnessTracker\bin\Debug\net10.0-windows\FitnessTracker.exe
+C:\Users\ryoch\Downloads\DDOOCP\FitnessTracker\bin\Debug\net10.0-windows\FitnessTracker.deps.json
+C:\Users\ryoch\Downloads\DDOOCP\FitnessTracker\bin\Debug\net10.0-windows\FitnessTracker.runtimeconfig.json
+C:\Users\ryoch\Downloads\DDOOCP\FitnessTracker\bin\Debug\net10.0-windows\FitnessTracker.dll
+C:\Users\ryoch\Downloads\DDOOCP\FitnessTracker\bin\Debug\net10.0-windows\FitnessTracker.pdb
+C:\Users\ryoch\Downloads\DDOOCP\FitnessTracker\obj\Debug\net10.0-windows\FitnessTracker.dll
+C:\Users\ryoch\Downloads\DDOOCP\FitnessTracker\obj\Debug\net10.0-windows\refint\FitnessTracker.dll
+C:\Users\ryoch\Downloads\DDOOCP\FitnessTracker\obj\Debug\net10.0-windows\FitnessTracker.pdb
+C:\Users\ryoch\Downloads\DDOOCP\FitnessTracker\obj\Debug\net10.0-windows\FitnessTracker.genruntimeconfig.cache
+C:\Users\ryoch\Downloads\DDOOCP\FitnessTracker\obj\Debug\net10.0-windows\ref\FitnessTracker.dll

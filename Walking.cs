@@ -2,9 +2,9 @@ using System;
 
 namespace FitnessTracker
 {
-    public class walking : Activity
+    public class Walking : Activity
     {
-        public walking()
+        public Walking()
             : base("Walking", "Steps", "Distance (km)", "Time (minutes)")
             {
             }

@@ -6,7 +6,7 @@ namespace FitnessTracker
     public class User
     {
         private string username;
-        private int password;
+        private string password;
         private double goalCalories;
 
         public User(string username, string password)
