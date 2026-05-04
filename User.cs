@@ -9,13 +9,6 @@ namespace FitnessTracker
         private string password;
         private double goalCalories;
 
-        public User(string username, string password)
-        {
-            this.username = username;
-            this.password = password;
-            this.goalCalories = 0;
-        }
-
         public string Username
         {
             get { return username; }
@@ -34,6 +27,14 @@ namespace FitnessTracker
             set { goalCalories = value; }
         }
 
+        public User(string username, string password)
+        {
+            this.username = username;
+            this.password = password;
+            this.goalCalories = 0;
+        }
+
+        // Validation Methods: Static methods to validate username and password formats
         public static bool IsValidUsername(string username)
         {
             if (string.IsNullOrEmpty(username))
@@ -59,6 +60,7 @@ namespace FitnessTracker
             return hasUpper && hasLower;
         }
 
+        // Virtual method for password checking, can be overridden by RegisteredUser for lockout functionality
         public virtual bool CheckPassword(string inputPassword)
         {
             return password == inputPassword;

@@ -9,13 +9,6 @@ namespace FitnessTracker
 
         private const int MaxAttempts = 3;
 
-        public RegisteredUser(string username, string password)
-            : base(username, password)
-        {
-            this.failedAttempts = 0;
-            this.isLocked = false;
-        }
-
         public int FailedAttempts
         {
             get { return failedAttempts; }
@@ -26,6 +19,13 @@ namespace FitnessTracker
         {
             get { return isLocked; }
             set { isLocked = value; }
+        }
+
+        public RegisteredUser(string username, string password)
+            : base(username, password)
+        {
+            this.failedAttempts = 0;
+            this.isLocked = false;
         }
         public override bool CheckPassword(string inputPassword)
         {
@@ -53,6 +53,7 @@ namespace FitnessTracker
             return MaxAttempts - failedAttempts;
         }
 
+        // Override ToFileString for file storage
         public override string ToFileString()
         {
             return base.ToFileString();

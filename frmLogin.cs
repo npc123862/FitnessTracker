@@ -5,6 +5,7 @@ using System.Windows.Forms;
 
 namespace FitnessTracker
 {
+    // Login and registration form that users see when they first open the application
     public partial class frmLogin : Form
     {
         private FitnessTrackerManager tracker;
@@ -37,6 +38,59 @@ namespace FitnessTracker
             txtRegisterUsername.Clear();
             txtRegisterPassword.Clear();
             txtConfirmPassword.Clear();
+        }
+
+        private void txtRegisterUsername_TextChanged(object sender, EventArgs e)
+        {
+            string username = txtRegisterUsername.Text;
+
+            if (string.IsNullOrEmpty(username))
+            {
+                ShowMessage("", Color.Black);
+                return;
+            }
+
+            if (!User.IsValidUsername(username))
+                ShowMessage("Username can only contain letters and numbers.", Color.Red);
+            else
+                ShowMessage("Username looks good!", Color.Green);
+        }
+
+        private void txtRegisterPassword_TextChanged(object sender, EventArgs e)
+        {
+            string password = txtRegisterPassword.Text;
+
+            if (string.IsNullOrEmpty(password))
+            {
+                ShowMessage("", Color.Black);
+                return;
+            }
+
+            if (password.Length < 12)
+                ShowMessage($"Password too short — {12 - password.Length} character(s) remaining.", Color.Red);
+            else if (password.Length > 12)
+                ShowMessage("Password too long — must be exactly 12 characters.", Color.Red);
+            else if (!User.IsValidPassword(password))
+                ShowMessage("Password needs at least 1 uppercase\nand 1 lowercase letter.", Color.Red);
+            else
+                ShowMessage("Password looks good!", Color.Green);
+        }
+
+        private void txtConfirmPassword_TextChanged(object sender, EventArgs e)
+        {
+            string password = txtRegisterPassword.Text;
+            string confirmPassword = txtConfirmPassword.Text;
+
+            if (string.IsNullOrEmpty(confirmPassword))
+            {
+                ShowMessage("", Color.Black);
+                return;
+            }
+
+            if (password != confirmPassword)
+                ShowMessage("Passwords do not match.", Color.Red);
+            else
+                ShowMessage("Passwords match!", Color.Green);
         }
 
         private void btnLogin_Click(object sender, EventArgs e)
@@ -93,7 +147,8 @@ namespace FitnessTracker
 
             if (result == "Registration successful. You can now log in.")
             {
-                ShowMessage(result, Color.Green);
+                MessageBox.Show("Registration successful!\nYou can now log in.",
+                    "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 ShowLoginPanel();
             }
             else

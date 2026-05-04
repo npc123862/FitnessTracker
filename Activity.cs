@@ -2,6 +2,7 @@ using System;
 
 namespace FitnessTracker
 {
+    // Abstract parent class for all fitness activities
     public abstract class Activity
     {
         private string activityName;
@@ -11,17 +12,6 @@ namespace FitnessTracker
         private string metric1Label;
         private string metric2Label;
         private string metric3Label;
-
-        public Activity(string activityName, string metric1Label, string metric2Label, string metric3Label)
-        {
-            this.activityName = activityName;
-            this.metric1Label = metric1Label;
-            this.metric2Label = metric2Label;
-            this.metric3Label = metric3Label;
-            this.metric1 = 0;
-            this.metric2 = 0;
-            this.metric3 = 0;
-        }
 
         public string ActivityName
         {
@@ -62,13 +52,27 @@ namespace FitnessTracker
             get { return metric3Label; }
         }
 
-        public abstract double CalculateCalories();
-        
-        public virtual string GetSummary()
+        // Child classes call this using base() to set the activity name and metric labels
+        public Activity(string activityName, string metric1Label, string metric2Label, string metric3Label)
         {
-            return $"{activityName}: {CalculateCalories():F2} calories burned";
+            this.activityName = activityName;
+            this.metric1Label = metric1Label;
+            this.metric2Label = metric2Label;
+            this.metric3Label = metric3Label;
+            this.metric1 = 0;
+            this.metric2 = 0;
+            this.metric3 = 0;
         }
 
+        public abstract double CalculateCalories();
+        
+        // Returns a summary string of this activity and calories burned
+        public virtual string GetSummary()
+        {
+            return $"{activityName}: {CalculateCalories():F2} kcal burned";
+        }
+
+        // Checks that all three metrics have been entered as positive numbers
         public bool AreMetricsValid()
         {
             return metric1 > 0 && metric2 > 0 && metric3 > 0;

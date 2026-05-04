@@ -66,7 +66,7 @@ namespace FitnessTracker
             lblCurrentGoal.ForeColor = System.Drawing.Color.Gray;
 
             var lblGoalInput = new System.Windows.Forms.Label();
-            lblGoalInput.Text = "Enter target calories to burn:";
+            lblGoalInput.Text = "Enter target kcal to burn:";
             lblGoalInput.Location = new System.Drawing.Point(0, 60);
             lblGoalInput.Size = new System.Drawing.Size(390, 22);
             lblGoalInput.Font = new System.Drawing.Font("Segoe UI", 9f);
@@ -221,9 +221,21 @@ namespace FitnessTracker
             btnViewProgress.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             btnViewProgress.Click += new System.EventHandler(this.btnViewProgress_Click);
 
+            btnViewHistory = new System.Windows.Forms.Button();
+            btnViewHistory.Text = "View Activity History";
+            btnViewHistory.Location = new System.Drawing.Point(0, 75);
+            btnViewHistory.Size = new System.Drawing.Size(400, 35);
+            btnViewHistory.Font = new System.Drawing.Font("Segoe UI", 9f, System.Drawing.FontStyle.Bold);
+            btnViewHistory.BackColor = System.Drawing.Color.SlateBlue;
+            btnViewHistory.ForeColor = System.Drawing.Color.White;
+            btnViewHistory.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            btnViewHistory.Click += new System.EventHandler(this.btnViewHistory_Click);
+
+            pnlRight.Controls.Add(btnViewHistory);
+
             txtProgress = new System.Windows.Forms.TextBox();
-            txtProgress.Location = new System.Drawing.Point(0, 80);
-            txtProgress.Size = new System.Drawing.Size(400, 435);
+            txtProgress.Location = new System.Drawing.Point(0, 120);
+            txtProgress.Size = new System.Drawing.Size(400, 395);
             txtProgress.Font = new System.Drawing.Font("Consolas", 10f);
             txtProgress.Multiline = true;
             txtProgress.ReadOnly = true;
@@ -262,6 +274,7 @@ namespace FitnessTracker
         private System.Windows.Forms.Button btnAddActivity;
         private System.Windows.Forms.Button btnClear;
         private System.Windows.Forms.Button btnViewProgress;
+        private System.Windows.Forms.Button btnViewHistory;
         private System.Windows.Forms.Button btnLogout;
         private System.Windows.Forms.ComboBox cmbActivity;
     }

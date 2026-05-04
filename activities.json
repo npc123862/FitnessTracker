@@ -1,0 +1,38 @@
+[
+  {
+    "Username": "john123",
+    "ActivityName": "Walking",
+    "Metric1": 1000.0,
+    "Metric2": 1.0,
+    "Metric3": 30.0,
+    "Metric1Label": "Steps",
+    "Metric2Label": "Distance (km)",
+    "Metric3Label": "Time (minutes)",
+    "CaloriesBurned": 1.8375,
+    "Date": "2026-05-02 21:54"
+  },
+  {
+    "Username": "john123",
+    "ActivityName": "Swimming",
+    "Metric1": 10.0,
+    "Metric2": 30.0,
+    "Metric3": 120.0,
+    "Metric1Label": "Number of Laps",
+    "Metric2Label": "Time (minutes)",
+    "Metric3Label": "Average Heart Rate (bpm)",
+    "CaloriesBurned": 3.675,
+    "Date": "2026-05-02 21:54"
+  },
+  {
+    "Username": "john123",
+    "ActivityName": "Yoga",
+    "Metric1": 10.0,
+    "Metric2": 30.0,
+    "Metric3": 1.0,
+    "Metric1Label": "Number of Poses",
+    "Metric2Label": "Time (minutes)",
+    "Metric3Label": "Intensity Level (1-10)",
+    "CaloriesBurned": 0.21000000000000005,
+    "Date": "2026-05-02 22:08"
+  }
+]

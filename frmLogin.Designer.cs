@@ -24,7 +24,7 @@
         {
             // Form
             this.Text = "Fitness Tracker - Login";
-            this.Size = new System.Drawing.Size(420, 500);
+            this.Size = new System.Drawing.Size(420, 540);
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.MaximizeBox = false;
@@ -33,7 +33,7 @@
             // Shared message label
             lblMessage = new System.Windows.Forms.Label();
             lblMessage.Location = new System.Drawing.Point(20, 430);
-            lblMessage.Size = new System.Drawing.Size(370, 40);
+            lblMessage.Size = new System.Drawing.Size(370, 60);
             lblMessage.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             lblMessage.Font = new System.Drawing.Font("Segoe UI", 9f);
 
@@ -144,6 +144,7 @@
             txtRegisterUsername.Location = new System.Drawing.Point(30, 80);
             txtRegisterUsername.Size = new System.Drawing.Size(310, 25);
             txtRegisterUsername.Font = new System.Drawing.Font("Segoe UI", 10f);
+            txtRegisterUsername.TextChanged += new System.EventHandler(this.txtRegisterUsername_TextChanged);
 
             // Register password label
             var lblRegisterPassword = new System.Windows.Forms.Label();
@@ -158,6 +159,7 @@
             txtRegisterPassword.Size = new System.Drawing.Size(310, 25);
             txtRegisterPassword.Font = new System.Drawing.Font("Segoe UI", 10f);
             txtRegisterPassword.PasswordChar = '*';
+            txtRegisterPassword.TextChanged += new System.EventHandler(this.txtRegisterPassword_TextChanged);
 
             // Confirm password label
             var lblConfirmPassword = new System.Windows.Forms.Label();
@@ -172,6 +174,7 @@
             txtConfirmPassword.Size = new System.Drawing.Size(310, 25);
             txtConfirmPassword.Font = new System.Drawing.Font("Segoe UI", 10f);
             txtConfirmPassword.PasswordChar = '*';
+            txtConfirmPassword.TextChanged += new System.EventHandler(this.txtConfirmPassword_TextChanged);
 
             // Register submit button
             btnRegister = new System.Windows.Forms.Button();
